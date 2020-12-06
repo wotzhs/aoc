@@ -10,7 +10,8 @@ int main() {
 	int ans=0, line_number=0;
 	vector<int> responses(26, 0);
 
-	while(getline(cin, line)) {
+	while(cin) {
+		getline(cin, line);
 		for (char ch: line) {
 			responses[ch-'a']++;
 		}
@@ -27,10 +28,6 @@ int main() {
 			vector<int>(26, 0).swap(responses);
 			line_number = 0;
 		}
-	}
-
-	for (int i: responses) {
-		if (i != 0 && i == line_number) ans++;
 	}
 
 	cout << ans << "\n";

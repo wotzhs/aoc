@@ -10,7 +10,8 @@ int main() {
 	int ans=0;
 
 	unordered_map<char, int> responses;
-	while(getline(cin, line)) {
+	while(cin) {
+		getline(cin, line);
 		for (char ch: line) {
 			responses[ch]++;
 		}
@@ -20,8 +21,6 @@ int main() {
 			responses.clear();
 		}
 	}
-
-	ans += responses.size();
 
 	cout << ans << "\n";
 }
